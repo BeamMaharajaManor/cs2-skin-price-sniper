@@ -1,0 +1,37 @@
+[project]
+name = "cs2-skin-price-sniper"
+version = "0.6.3"
+description = "Windows desktop sniper for tracking and sniping CS2 skin listings across marketplaces."
+readme = "CONTRIBUTING.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "sniper-crew", email = "dev@cs2sniper.local" }]
+dependencies = [
+    "httpx>=0.27.0",
+    "websockets>=12.0",
+    "pydantic>=2.7.0",
+    "PySide6>=6.7.0",
+    "apscheduler>=3.10.4",
+    "tenacity>=8.2.3",
+    "python-dotenv>=1.0.1",
+    "rich>=13.7.1",
+    "structlog>=24.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.2.0",
+    "pytest-asyncio>=0.23.6",
+    "ruff>=0.4.4",
+    "mypy>=1.10.0",
+]
+
+[project.scripts]
+cs2-sniper = "cs2_sniper.__main__:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["cs2_sniper"]
