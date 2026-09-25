@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+
+# Env & secrets
+.env
+.env.local
+*.session
+credentials.json
+
+# Local sniper data
+data/listings.db
+data/cache/
+logs/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Windows
+Thumbs.db
+desktop.ini
