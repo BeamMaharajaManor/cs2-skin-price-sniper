@@ -1,0 +1,1 @@
+"""PySide6 desktop UI for the CS2 Skin Price Sniper."""
